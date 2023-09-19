@@ -1,4 +1,9 @@
-- name: Include task list in play
+- name: job for single branch pipelines
   ansible.builtin.include_tasks:
     file: sjob.yml
   loop: "{{sjobs}}"
+
+- name: job for multi branch pipelines
+  ansible.builtin.include_tasks:
+    file: mjob.yml
+  loop: "{{mjobs}}"
