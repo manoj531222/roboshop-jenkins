@@ -10,3 +10,4 @@ mjobs:
   - { git_repo_url: https://github.com/manoj531222/shipping.git, job_name: shipping }
   - { git_repo_url: https://github.com/manoj531222/payment.git, job_name: payment }
   - { git_repo_url: https://github.com/manoj531222/dispatch.git, job_name: dispatch }
+  - { git_repo_url: https://github.com/manoj531222/frontend.git, job_name: frontend }
