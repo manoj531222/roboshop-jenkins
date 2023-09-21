@@ -41,6 +41,19 @@ def call() {
                 }
             }
 
+            stage('Release Application') {
+                when {
+                    expression {
+                        env.TAG_NAME ==~ ".*"
+                    }
+                }
+                steps {
+                    sh 'echo $TAG_NAME >VERSION'
+                    sh 'zip -r ${component}-${TAG_NAME}.zip *.ini *.py *.txt VERSION'
+                    sh 'curl -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://172.31.28.176:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+                }
+            }
+
 
         }
 
