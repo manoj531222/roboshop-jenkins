@@ -16,7 +16,12 @@
         <numToKeep>-1</numToKeep>
         <abortBuilds>false</abortBuilds>
     </orphanedItemStrategy>
-    <triggers/>
+    <triggers>
+        <com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger plugin=                                                                             "multibranch-scan-webhook-trigger@1.0.9">
+            <spec></spec>
+            <token>{{ item.job_name }}</token>
+        </com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger>
+    </triggers>
     <disabled>false</disabled>
     <sources class="jenkins.branch.MultiBranchProject$BranchSourceList" plugin="branch-api@2.1128.v717130d4f816">
         <data>
