@@ -51,7 +51,6 @@ def call() {
                     }
                 }
                 steps {
-                    sh 'npm install'
                     sh 'echo $TAG_NAME >VERSION'
                     sh 'zip -r ${component}-${TAG_NAME}.zip *'
                     sh 'zip -d ${component}-${TAG_NAME}.zip jenkinsfile'
