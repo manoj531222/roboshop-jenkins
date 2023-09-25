@@ -30,11 +30,11 @@ def call() {
                 }
             }
 
-            stage('Terraform Apply') {
-                steps {
-                    sh 'terraform ${action} -auto-approve -var-file=env-${env}/main.tfvars'
-                }
-            }
+//            stage('Terraform Apply') {
+//                steps {
+//                    sh 'terraform ${action} -auto-approve -var-file=env-${env}/main.tfvars'
+//                }
+//            }
 
         }
 
